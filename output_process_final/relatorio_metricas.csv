@@ -1,0 +1,6 @@
+Amostra;Caminho_Relativo;Massa_Referencia (px);Massa_Algoritmo (px);Qtd_Ref_AnyLabeling;Qtd_Algoritmo;Cortes_Geometricos;Acuracia_Objetos (TP);Falsos_Positivos (FP);Falsos_Negativos (FN);F1_Score_Instancia;F1_Score_Massa (Dice)
+2-1.tif;Mutantes;17498;15657;73;63;64;46;17;27;0.6765;0.834
+3-1.tif;Mutantes;67181;51067;82;79;87;62;17;20;0.7702;0.8232
+1-1.tif;Selvagens;15519;15203;76;44;44;21;23;55;0.35;0.7965
+11-1.tif;Selvagens;18281;16271;80;62;73;50;12;30;0.7042;0.8561
+12-1.tif;Selvagens;17735;15801;79;64;70;53;11;26;0.7413;0.8482

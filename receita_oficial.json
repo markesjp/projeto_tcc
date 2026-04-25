@@ -1,0 +1,121 @@
+{
+    "nome_receita": "Receita_Selvagens_mod2",
+    "pipeline_filtros": [
+        {
+            "nome": "Filtro Gaussiano",
+            "parametros": {
+                "tamanho_kernel": 11,
+                "constante_sigma": 0.0
+            }
+        },
+        {
+            "nome": "Binarizacao Sauvola",
+            "parametros": {
+                "tamanho_kernel": 59,
+                "threshold": 0.3
+            }
+        },
+        {
+            "nome": "Filtrar por Elipse",
+            "parametros": {
+                "espessura_banda": 255,
+                "dilatacao_extra": 10,
+                "distancia_base": 18.0,
+                "compatibilidade_minima": 0.2,
+                "area_min_relativa": 0.01,
+                "max_iter": 20,
+                "amostrar_contorno_passo": 3,
+                "usar_gap_dinamico": true,
+                "usar_mad_dinamico": true,
+                "manter_maior_componente": true
+            }
+        },
+        {
+            "nome": "Bitwise NOT",
+            "parametros": {}
+        },
+        {
+            "nome": "Remocao objetos",
+            "parametros": {
+                "qnt_pixels_minimo": 0,
+                "qnt_pixels_maximo": 200
+            }
+        },
+        {
+            "nome": "Bitwise NOT",
+            "parametros": {}
+        },
+        {
+            "nome": "Remocao objetos",
+            "parametros": {
+                "qnt_pixels_minimo": 0,
+                "qnt_pixels_maximo": 200
+            }
+        },
+        {
+            "nome": "MedianBlur",
+            "parametros": {
+                "kernel": 9
+            }
+        },
+        {
+            "nome": "Dilatacao",
+            "parametros": {
+                "tamanho_kernel": 3,
+                "iteracoes": 1
+            }
+        },
+        {
+            "nome": "Bitwise NOT",
+            "parametros": {}
+        },
+        {
+            "nome": "Remocao objetos",
+            "parametros": {
+                "qnt_pixels_minimo": 0,
+                "qnt_pixels_maximo": 200
+            }
+        },
+        {
+            "nome": "Bitwise NOT",
+            "parametros": {}
+        },
+        {
+            "nome": "Remocao objetos",
+            "parametros": {
+                "qnt_pixels_minimo": 0,
+                "qnt_pixels_maximo": 200
+            }
+        }
+    ],
+    "parametros_analise_final": {
+        "limiar_concavidade": 0.005,
+        "max_dist": 80,
+        "min_score": 0.9,
+        "fator_detalhe": 14.0,
+        "fator_area_minima": 0.75,
+        "limiar_tangente": 0.45,
+        "topologia_refinada": {
+            "ellipse_thickness_base": 1,
+            "bolsoes_area_max_base": 400,
+            "bolsoes_dilate_kernel_base": 7,
+            "bolsoes_dilate_iterations": 2,
+            "intersection_dilate_kernel_base": 3,
+            "intersection_dilate_iterations": 1,
+            "topology_close_kernel_base": 3,
+            "topology_close_iterations": 1,
+            "refine_ellipse_with_holes": true,
+            "use_ellipse_topology": true
+        }
+    },
+    "parametros_filtro_elipse_iterativo": {
+        "distancia_base": 18.0,
+        "compatibilidade_minima": 0.2,
+        "area_min_relativa": 0.01,
+        "max_iter": 20,
+        "amostrar_contorno_passo": 3,
+        "usar_gap_dinamico": true,
+        "usar_mad_dinamico": true,
+        "manter_maior_componente": true
+    }
+}
